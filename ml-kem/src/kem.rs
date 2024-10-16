@@ -24,9 +24,9 @@ pub struct DecapsulationKey<P>
 where
     P: KemParams,
 {
-    dk_pke: DecryptionKey<P>,
-    ek: EncapsulationKey<P>,
-    z: B32,
+    pub dk_pke: DecryptionKey<P>,
+    pub ek: EncapsulationKey<P>,
+    pub z: B32,
 }
 
 #[cfg(feature = "zeroize")]
