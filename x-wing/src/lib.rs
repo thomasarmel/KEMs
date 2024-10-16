@@ -129,7 +129,7 @@ impl From<&[u8; ENCAPSULATION_KEY_SIZE]> for EncapsulationKey {
 #[cfg_attr(feature = "zeroize", derive(Zeroize, ZeroizeOnDrop))]
 #[cfg_attr(test, derive(PartialEq, Eq))]
 pub struct DecapsulationKey {
-    sk: [u8; DECAPSULATION_KEY_SIZE],
+    pub sk: [u8; DECAPSULATION_KEY_SIZE],
 }
 
 impl Decapsulate<Ciphertext, SharedSecret> for DecapsulationKey {
