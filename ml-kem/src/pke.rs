@@ -17,7 +17,7 @@ pub struct DecryptionKey<P>
 where
     P: PkeParams,
 {
-    s_hat: NttVector<P::K>,
+    pub s_hat: NttVector<P::K>,
 }
 
 #[cfg(feature = "zeroize")]
@@ -95,8 +95,8 @@ pub struct EncryptionKey<P>
 where
     P: PkeParams,
 {
-    t_hat: NttVector<P::K>,
-    rho: B32,
+    pub t_hat: NttVector<P::K>,
+    pub rho: B32,
 }
 
 impl<P> EncryptionKey<P>
